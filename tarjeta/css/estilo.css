@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.cont{
+    width: 30%;
+    height: 80%;
+    background-color: brown;
+    border-radius: 15px;
+    display: grid;
+}
+.img{
+    width: 100%;
+    background-image: url(../recursos/portada.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.info{
+    height: 100%;
+    background-color: aliceblue;
+    border-radius: 0px 0px 15px 15px;
+}
+.info h2{
+    margin: 10px;
+    font-size: 25px;
+}
+.info p{
+    margin: 10px;
+    font-size: 20px;
+}
+.tarjeta_dinamica{
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: cadetblue;
+}
+.elementos{
+    width: 50%;
+    height: 50%;
+    display: grid;
+}
+.imagen-nueva{
+    height: 200px;
+    margin: 5px;
+}

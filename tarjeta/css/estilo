@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.tarjeta_dinamica{
+    background-color: cadetblue;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+.elementos{
+    width: 50%;
+    height: 50%;
+    display: grid;
+}
+.imagen-nueva{
+    height: 200px;
+    margin: 5px;
+}
