@@ -1,25 +1,22 @@
 const elementos = document.querySelector("#elementos");
 
 
-function crearimagen(event){
+function creartarjeta(event){
 
     console.log(event.target.value);
     elementos.innerHTML = "";
     for(let i = 0; i< event.target.value; i++){
         //elementos.innerHTML = "";
-        const imagen = new Image();
-        imagen.src = "recursos/keroppi.webp";
-        imagen.classList.add("imagen-nueva");
+        const cont = new Image();
+        imagen.src = "recursos/portada.avif";
+        imagen.classList.add("img");
         elementos.appendChild(imagen);
-        const titulo = document.createElement("h2");
+        const texto = document.create("info");
         titulo.textContent = "keroppi";
-        elementos.appendChild(titulo);
+        elementos.appendChild(texto);
     }
-            /*<img src="recursos/keroppi.webp" class="imagen-nueva"></img>
-    const imagen = ''*/
-    /*const imagen = document.createElement("img");
-    imagen.src = "recursos/keroppi.webp";
-    imagen.classList.add("imagen-nueva");
-    elementos.appendChild(imagen);
-    console.log(imagen);*/
 }
+/*
+const tarjeta = document.createElement();
+        tarjeta.classList.add("cont");
+        elementos.appendChild(cont);*/

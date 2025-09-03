@@ -6,39 +6,55 @@
 body{
     width: 100vw;
     height: 100vh;
+    margin: 10px;
 }
 .cont{
     width: 30%;
-    height: 80%;
-    background-color: brown;
+    height: 100%;
     border-radius: 15px;
     display: grid;
 }
 .img{
     width: 100%;
+    height: 100%;
     background-image: url(../recursos/portada.avif);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 15px 15px 0px 0px;
+    margin-bottom: 150px;
 }
 .info{
-    height: 100%;
-    background-color: aliceblue;
+    padding: 0;
+    height: 70%;
+    background-color: #191d39;
     border-radius: 0px 0px 15px 15px;
+    color: aliceblue;
 }
-.info h2{
-    margin: 10px;
-    font-size: 25px;
+.info h1{
+    margin: 20px;
+    font-size: 30px;
 }
 .info p{
-    margin: 10px;
+    margin: 20px;
+    margin-bottom: 0;
     font-size: 20px;
 }
-.tarjeta_dinamica{
-    margin: 10px;
+.boton1{
+    background-color:aliceblue;
+    color:  #191d39;
+    margin: 20px;
+    padding: 10px;
     border-radius: 10px;
+    border-style: none;
+}
+.tarjeta_dinamica{
+    width: 30%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
     text-align: center;
-    background-color: cadetblue;
+    background-color: #45416B;
+    color: aliceblue;
 }
 .elementos{
     width: 50%;
@@ -48,4 +64,22 @@ body{
 .imagen-nueva{
     height: 200px;
     margin: 5px;
+}
+.contenedor_formulario_producto_nuevo{
+    padding: 10px 10px 10px;
+    background-color: #45416B;
+    color: aliceblue;
+    width: 30vw;
+    border-radius: 5px;
+}
+#formulario_producto_nuevo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+button{
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px;
+    margin: 10px;
 }
