@@ -1,0 +1,399 @@
+*{
+    padding: 0;
+    margin: 0; 
+    font-family: "Outfit", sans-serif;
+}
+.outfit-uniquifier {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+body{
+    margin: 10px;
+}
+nav{
+    height: 10vh;
+}
+.paginas{
+    height: 100%;
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows:repeat(auto-fill, minmax, (1fr, 1fr));
+    grid-template-areas: 
+    "inicio categorias media buscar buscar";
+}
+.inicio{
+    grid-area: inicio;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fb6f92;
+}
+.categorias{
+    grid-area: categorias;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fb6f92;
+    
+}
+.media{
+    grid-area: media;
+    text-align: center;
+    align-content: center;
+    font-size: 25px;
+    text-decoration: none;
+    color: #fb6f92;
+}
+.buscar{
+    grid-area: buscar;
+    align-content: center;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #52abff;
+    background-color: #cde7fd;
+}
+.header{
+    background-color: #ffd4db;
+    border-radius: 20px 20px 0px 0px;
+    height: 60vh;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+.header img{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transition: ease-in;
+}
+#img_dibujo{
+    width: 20%;
+    left: 50px;
+}
+#img_flores{
+    width: 5%;
+    left: 10px;
+}
+#img_flores2{
+    width: 5%;
+    left: 300px;
+}
+.titulo-h{
+    height: 70px;
+    margin-left: 70vh;
+    margin-top: 10vh;
+    background-color: #fb6f92;
+    color: aliceblue;
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-size: 45px;
+    position: absolute;
+    transform: translateY("50%");
+    overflow: hidden;
+}
+.texto-h{
+    height: 150px;
+    width: 100vh;
+    margin-left: 70vh;
+    margin-top: 25vh;
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-size: 25px;
+    position: absolute;
+    transform: translateY("50%");
+    overflow: hidden;
+}
+.texto-h b{
+    color: #fb6f92;;
+}
+.cont1{
+    background-color: #cde7fd;
+    border-radius: 20px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns:repeat(3, 2fr);
+    grid-template-rows:repeat(auto-fill, minmax, (1fr, 1fr));
+    grid-template-areas: 
+    "cont-text1 cont-text1 imgcont"
+    "cont-text2 cont-text2 imgcont";
+}
+.imgcont1{
+    grid-area: imgcont;
+    width: 90%;
+    background-color: #fb6f92;
+    border-radius: 30px;
+    margin: 20px;
+}
+.cont-text1{
+     grid-area: cont-text1;
+}
+.titulo1-c{
+    height: 70px;
+    margin: 40px;
+    background-color: #52abff;
+    color: aliceblue;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 45px;
+}
+.text1-c{
+    height: auto;
+    margin:  0px 30px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 50px;
+    padding:  15px 25px;
+    font-size: 20px;
+}
+.text1-c b{
+    color: #52abff;
+}
+.cont-text2{
+     grid-area: cont-text2;
+
+}
+.titulo2-c{
+    height: 70px;
+    margin: 0px 40px;
+    background-color: #52abff;
+    color: aliceblue;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 45px;
+}
+.text2-c{
+    height: auto;
+    margin: 30px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 50px;
+    padding:  15px 25px;
+    font-size: 20px;
+}
+.text2-c b{
+    color: #52abff;
+}
+.cont1-categorias{
+    background-color: #cde7fd;
+    border-radius: 20px 20px 0px 0px;
+    height: 60vh;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+.cont1-categorias img{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transition: ease-in;
+}
+#img_dibujo2{
+    width: 20%;
+    right: 50px;
+}
+/*cont1*/
+.titulo-cont1-cat{
+    height: 70px;
+    margin: 10vh;
+    margin-top: 10vh;
+    background-color: #52abff;
+    color: aliceblue;
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-size: 45px;
+    position: absolute;
+    transform: translateY("-50%");
+    overflow: hidden;
+}
+.text1-cont1-cat{
+    height: 150px;
+    width: 100vh;
+    margin-top: 25vh;
+    margin-left: 10vh;
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-size: 25px;
+    position: absolute;
+    transform: translateY("-50%");
+    overflow: hidden;
+}
+.text1-cont1-cat b{
+    color: #52abff;
+}
+/*lolita clasica*/
+.cont2-categorias{
+    border-radius: 20px;
+    height: 80vh;
+    margin: 10px;
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows:repeat(auto-fill, minmax, (1fr, 1fr));
+    grid-template-areas: 
+    "img1-cont2 img2-cont2 img3-cont2 info1-cont2 info1-cont2";
+}
+.img1-cont2-cat{
+    grid-area: img1-cont2;
+    background-image: url(../recursos/classiclolita.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px 0px 0px 20px;
+}
+.img2-cont2-cat{
+    grid-area: img2-cont2;
+    background-image: url(../recursos/classiclolita2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img3-cont2-cat{
+    grid-area: img3-cont2;
+    background-image: url(../recursos/classiclolita3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.info1-cont2-cat{
+    background-color: #ffd4db;
+    grid-area: info1-cont2;
+    border-radius: 0px 20px 20px 0px;
+}
+.titulo-cont2-cat{
+    text-align: center;
+    margin: 20px;
+    background-color: #fb6f92;
+    color: aliceblue;
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-size: 45px;
+}
+.text1-cont2-cat{
+    background-color: aliceblue;
+    margin: 0px 20px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.text1-cont2-cat b{
+    color: #fb6f92;
+}
+/*lolita gotica*/
+.cont3-categorias{
+    border-radius: 20px;
+    height: 80vh;
+    margin: 10px;
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows:repeat(auto-fill, minmax, (1fr, 1fr));
+    grid-template-areas: 
+    "info1-cont3 info1-cont3 img1-cont3 img2-cont3 img3-cont3";
+}
+.img1-cont3-cat{
+    grid-area: img1-cont3;
+    background-image: url(../recursos/gothiclolita.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img2-cont3-cat{
+    grid-area: img2-cont3;
+    background-image: url(../recursos/gothiclolita2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img3-cont3-cat{
+    grid-area: img3-cont3;
+    background-image: url(../recursos/gothiclolita3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 20px 20px 0px;
+}
+.info1-cont3-cat{
+    background-color: #cde7fd;
+    grid-area: info1-cont3;
+    border-radius: 20px 0px 0px 20px;
+}
+.titulo-cont3-cat{
+    text-align: center;
+    margin: 20px;
+    background-color: #52abff;
+    color: aliceblue;
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-size: 45px;
+}
+.text1-cont3-cat{
+    background-color: aliceblue;
+    margin: 0px 20px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.text1-cont3-cat b{
+    color: #52abff;
+}
+/*deco lolita*/
+.cont4-categorias{
+    border-radius: 20px;
+    height: 80vh;
+    margin: 10px;
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows:repeat(auto-fill, minmax, (1fr, 1fr));
+    grid-template-areas: 
+    "img1-cont4 img2-cont4 img3-cont4 info1-cont4 info1-cont4";
+}
+.img1-cont4-cat{
+    grid-area: img1-cont4;
+    background-image: url(../recursos/decololita.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px 0px 0px 20px;
+}
+.img2-cont4-cat{
+    grid-area: img2-cont4;
+    background-image: url(../recursos/decololita2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img3-cont4-cat{
+    grid-area: img3-cont4;
+    background-image: url(../recursos/decololita3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.info1-cont4-cat{
+    background-color: #ffd4db;
+    grid-area: info1-cont4;
+    border-radius: 0px 20px 20px 0px;
+}
+.titulo-cont4-cat{
+    text-align: center;
+    margin: 20px;
+    background-color: #fb6f92;
+    color: aliceblue;
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-size: 45px;
+}
+.text1-cont4-cat{
+    background-color: aliceblue;
+    margin: 0px 20px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.text1-cont4-cat b{
+    color: #fb6f92;
+}
+/*Media*/
+.cont-media{
+    background-color: #ffd4db;
+    
+}
