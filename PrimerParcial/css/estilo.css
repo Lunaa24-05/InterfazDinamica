@@ -395,5 +395,96 @@ nav{
 /*Media*/
 .cont-media{
     background-color: #ffd4db;
-    
+    color: #fb6f92;
+    border-radius: 40px;
+    margin: 10px;
+}
+.titulo-media{
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+}
+.cont2-media{
+    background-color: #fb6f92;
+    border-radius: 40px;
+    margin: 10px;
+    width: 80vh;
+}
+.sub-media1{
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+}
+.imgs-media1{
+    border-radius: 20px;
+    height: 100vh;
+    background-color: #ffd4db;
+    margin: 10px;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(auto-fill, minmax, (1fr, 1fr));
+    grid-template-areas: 
+    "img1 img2 img3"
+    "img1 img2 img3"
+    "img1 img2 img3"
+    "img1-text img2-text img3-text";
+}
+.img1-media{
+    grid-area: img1;
+    background-image: url(../recursos/beatrix.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 40px;
+    border-radius: 20px 20px 0px 0px;
+}
+.img1-text{
+    grid-area: img1-text;
+    background-color: aliceblue;
+    height: auto;
+    color: #52abff;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 40px;
+    margin: 40px;
+    text-align: center;
+    height: 50px;
+}
+.img2-media{
+    grid-area: img2;
+    background-image: url(../recursos/kiraimai.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 40px;
+    border-radius: 20px 20px 0px 0px;
+}
+.img2-text{
+    grid-area: img2-text;
+    background-color: aliceblue;
+    color: #52abff;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 40px;
+    margin: 40px;
+    text-align: center;
+    height: 30px;
+}
+.img3-media{
+    grid-area: img3;
+    background-image: url(../recursos/kamikaze.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 40px;
+    border-radius: 20px 20px 0px 0px;
+}
+.img3-text{
+    grid-area: img3-text;
+    background-color: aliceblue;
+    color: #52abff;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 40px;
+    margin: 40px;
+    text-align: center;
+    height: 30px;
 }
