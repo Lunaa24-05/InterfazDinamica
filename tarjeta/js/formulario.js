@@ -1,7 +1,11 @@
-const formulario_producto_nuevo = document.querySelector("formulario_producto_nuevo");
+const formulario_producto_nuevo = document.querySelector("#formulario_producto_nuevo")
+let productos = []; //declarando un arreglo vacio
+let src_imagen_producto = "../recursos/default.jpg";
+let formulario_oculto = true;
 
 class Producto{
-    constructor(id, nombre, descripcion, precio){
+    constructor(id, nombre, descripcion, precio, imagen){
+        this.Imagen = imagen;
         this.Id = id;
         this.Nombre = nombre;
         this.Descripcion = descripcion;
@@ -9,6 +13,7 @@ class Producto{
     }
     ObternerDatos(){
         console.log(this.Id);
+        console.log(this.Imagen);
         console.log(this.Nombre);
         console.log(this.Descripcion);
         console.log(this.Precio);
@@ -17,10 +22,53 @@ class Producto{
 //cada elemento guardado en el formulario lo convierte en objeto
 function AgregarProducto(event){
     //console.log(document.querySelector('#nombre_producto').value);
-    let lectorFormulario = new FormData(formulario_producto_nuevo); //recibe el formulario por medio del id
-    console.log(lectorFormulario);
-    const datos = Object.fromEntries(lectorFormulario.entries());//toma los form y main para ascociarlos
-    const json = JSON.stringify(datos);
+    let datosFormulario = new FormData(formulario_producto_nuevo); //recibe el formulario por medio del id
+    console.log(datosFormulario);
+    const datos = Object.fromEntries(datosFormulario.entries());//toma los form y main para ascociarlos
     console.log(datos);
+    if(datos.nombre != "" && datos.Descripcion !="" && datos.Precio != null){
+
+        productos.push(new Producto(productos.length+1,src_imagen_producto, datos.Imagen, datos.Nombre, datos.Descripcion, datos.Precio, datos.Imagen));
+        //imprimir el arreglo por medio de un foreach
+        productos.forEach(producto => {
+        producto.ObternerDatos();
+    });
+    if(productos.lenght > 0){
+        creartarjeta(productos[productos.length-1])
+        mostrarFormularioAgregarProducto()
+    }
+    }
+
+    /*const json = JSON.stringify(datos);
+    console.log(datos);*/
     //console.log(formulario_producto_nuevo);
+}
+function ObtenerImagen(event){
+    const file = event.target.files[0];
+    console.log(file)
+    //console.log(event.target);
+    if(file.type === "image/jpeg" || file.type === "image/png"){
+        console.log(file.name);
+        const lector = new FileReader();
+        lector.onload = (event) =>{
+            src_imagen_producto = event.target.result;
+            //console.log(event.target.result);
+            document.querySelector("#imagen-file").src = event.target.result;
+        }
+        lector.readAsDataURL(file);
+    }
+}
+function ocultarFormulario(){
+    const formulario = document.querySelector("contenedor_formulario_producto_nuevo");
+
+    if(!formulario_oculto){
+        formulario_producto_nuevo.style.display = "none";
+        formulario_oculto = true;
+    }
+    else{
+        formulario_producto_nuevo.style.display = "grid";
+        formulario_oculto = false;
+    }
+
+
 }

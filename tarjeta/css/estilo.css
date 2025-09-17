@@ -1,7 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: monospace;
+    font-family: "Outfit", sans-serif;
+}
+.outfit-uniquifier {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 body{
     width: 100vw;
@@ -53,7 +59,7 @@ body{
     padding: 5px;
     border-radius: 5px;
     text-align: center;
-    background-color: #45416B;
+    background-color: #4c457b;
     color: aliceblue;
 }
 .elementos{
@@ -65,9 +71,49 @@ body{
     height: 200px;
     margin: 5px;
 }
+/*nav*/
+.nav{
+    background-color: #191d39;
+    height: 10vh;
+    color: aliceblue;
+    font-size: 25px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(auto-fill, minmax, (1fr, 1fr));
+    grid-template-areas: 
+    "productos iniciar crear";
+}
+.productos{
+    grid-area: productos;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+}
+.iniciar{
+    grid-area: iniciar;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+}
+.carrito{
+    grid-area: crear;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+}
+/*contenedor*/
 .contenedor_formulario_producto_nuevo{
     padding: 10px 10px 10px;
-    background-color: #45416B;
+    background-color: #191d39;
     color: aliceblue;
     width: 30vw;
     border-radius: 5px;
@@ -77,9 +123,38 @@ body{
     display: flex;
     flex-direction: column;
 }
-button{
+#formulario_producto_nuevo label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+#formulario_producto_nuevo input{
+    border-radius: 10px;
+    height: 30px;
+    padding: 5px;
+    border-style: none;
+}
+.boton3{
     border-radius: 5px;
     border-style: none;
     padding: 5px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #4c457b;
+    color: aliceblue;
+    font-size: 18px;
+}
+
+.imagen-previsualizacion{
+    border: 2ps solid black;
+    width: 100%;
+}
+.botonProducto{
+    background-color: #4c457b;
+    color: aliceblue;
+    padding: 10px;
     margin: 10px;
+    border-style: none;
+    border-radius: 50px;
+    font-size: 20px;
 }

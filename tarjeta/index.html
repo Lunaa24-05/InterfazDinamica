@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tarjeta</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <!--fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Matemasie&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!--fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Matemasie&family=Outfit:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form id="tarjeta_dinamica" class="tarjeta_dinamica">
+    <!-- <form id="tarjeta_dinamica" class="tarjeta_dinamica">
         <label for="">Ingresa cantidad de elementos:</label>
-        <input type="number" name="Cantidad" id="cantidad" onchange="creartarjeta(event)">
+        <input type="number" name="Cantidad" id="cantidad" onchange="">
         <div id="elementos" class="elementos"> 
         </div>
-    </form>
-    <div class="cont">
+    </form> -->
+    <!--<div class="cont">
     <div class="img">
 
     </div>
@@ -26,22 +34,31 @@
         <input type="button" value="Mas informacion" onclick="" class="boton1">
    </div>
     </div>
-    <input type="button" value="Agregar producto" onclick="">
-    <div class="contenedor_formulario_producto_nuevo">
+-->
+    <div class="nav">
+        <div class="productos">Productos</div>
+        <div class="iniciar">Iniciar sesión</div>
+        <div class="carrito">Carrito de compras</div>
+    </div>
+    <div class="contenedor">
+    <input type="button" value="Agregar producto" onchange="ocultarFormulario(event)" class="botonProducto">
+    <div class="contenedor_formulario_producto_nuevo" id="contenedor_formulario_producto_nuevo">
         <form id="formulario_producto_nuevo">
-            <!--label for="Imagen"></label>
-            <input type="file" name="Imagen" id="imagen_producto"-->
+            <img id="imagen-file" class="imagen-previsualizacion" src="recursos/default.jpg">
+            <label for="Imagen"></label>
+            <input type="file" name="Imagen" id="imagen_producto" onchange="ObtenerImagen(event)">
 
             <label for="Nombre">Nombre:</label>
             <input type="text" name="Nombre" id="nombre_producto">
 
-            <label for="Descripcion">Descripcion:</label>
+            <label for="Descripcion">Descripción:</label>
             <textarea name="Descripcion" id="descripcion"></textarea>
 
             <label for="Precio">Precio:</label>
             <input type="number" name="Precio" id="precio">
         </form>
-            <button onclick="AgregarProducto(event)">Agregar</button>
+            <input type="button" value="Agregar" onclick="AgregarProducto(event)" class="boton3">
+    </div>
     </div>
 </body>
 <script src="js/javascript.js"></script>
