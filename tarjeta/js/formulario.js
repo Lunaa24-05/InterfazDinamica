@@ -1,7 +1,7 @@
-const formulario_producto_nuevo = document.querySelector("#formulario_producto_nuevo")
+const formulario_producto_nuevo = document.querySelector("#formulario_producto_nuevo");
 let productos = []; //declarando un arreglo vacio
 let src_imagen_producto = "../recursos/default.jpg";
-let formulario_oculto = true;
+let formulario_visible = false;
 
 class Producto{
     constructor(id, nombre, descripcion, precio, imagen){
@@ -21,24 +21,21 @@ class Producto{
 }
 //cada elemento guardado en el formulario lo convierte en objeto
 function AgregarProducto(event){
-    //console.log(document.querySelector('#nombre_producto').value);
     let datosFormulario = new FormData(formulario_producto_nuevo); //recibe el formulario por medio del id
-    console.log(datosFormulario);
+    //console.log(datosFormulario);
     const datos = Object.fromEntries(datosFormulario.entries());//toma los form y main para ascociarlos
     console.log(datos);
-    if(datos.nombre != "" && datos.Descripcion !="" && datos.Precio != null){
-
-        productos.push(new Producto(productos.length+1,src_imagen_producto, datos.Imagen, datos.Nombre, datos.Descripcion, datos.Precio, datos.Imagen));
+    if(datos.nombre != "" && datos.Descripcion !="" && datos.Precio != null && datos.imagen !=""){
+       productos.push(new Producto(productos.length+1,src_imagen_producto, datos.Nombre, datos.Descripcion, datos.Precio, datos.Imagen));
         //imprimir el arreglo por medio de un foreach
-        productos.forEach(producto => {
+       /* productos.forEach(producto => {
         producto.ObternerDatos();
-    });
-    if(productos.lenght > 0){
-        creartarjeta(productos[productos.length-1])
-        mostrarFormularioAgregarProducto()
-    }
-    }
-
+    });*/
+       if(productos.length > 0){
+           crearTarjeta(productos[productos.length-1])
+            MostrarProducto()
+             }
+        }
     /*const json = JSON.stringify(datos);
     console.log(datos);*/
     //console.log(formulario_producto_nuevo);
@@ -53,21 +50,21 @@ function ObtenerImagen(event){
         lector.onload = (event) =>{
             src_imagen_producto = event.target.result;
             //console.log(event.target.result);
-            document.querySelector("#imagen-file").src = event.target.result;
+            document.querySelector("#imagen-file").src = src_imagen_producto;//event.target.result=
         }
         lector.readAsDataURL(file);
     }
 }
-function ocultarFormulario(){
-    const formulario = document.querySelector("contenedor_formulario_producto_nuevo");
+function MostrarProducto(){
+    const formulario = document.querySelector("#contenedor_formulario_producto_nuevo");
 
-    if(!formulario_oculto){
-        formulario_producto_nuevo.style.display = "none";
-        formulario_oculto = true;
+    if(!formulario_visible){
+        formulario.style.display = "grid";
+        formulario_visible = true;
     }
     else{
-        formulario_producto_nuevo.style.display = "grid";
-        formulario_oculto = false;
+        formulario.style.display = "none";
+        formulario_visible = false;
     }
 
 
