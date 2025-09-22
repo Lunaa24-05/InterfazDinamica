@@ -1,11 +1,11 @@
-const url_api = "https://fakestoreapi.com/users";
+const url_api = "https://pokeapi.co/api/v2/pokemon";
 
 fetch(url_api).then(response => response.json())
 .then( datos => {
     console.log(datos);
 })
 
-/*fetch(url_api).then(respuesta =>{
+fetch(url_api).then(respuesta =>{
     if(respuesta.ok){
         console.log(respuesta);
         return respuesta.json();
@@ -13,12 +13,12 @@ fetch(url_api).then(response => response.json())
         throw new Error ("Error en la peticion: " + respuesta.status)
     }
 }).then(datos =>{
-     datos.forEach(usuario => {
-        console.log(usuario.name)
+     datos.forEach(pokemon => {
+        console.log(pokemon.name)
         //otra peticion fetch mandado el url del pokemon 
         //para que me devuelva todos los datos de cada pokemon.
     });
-})*/
+})
 
 function peticionAJAX(url){
     let xhr = new XMLHttpRequest();
@@ -35,4 +35,4 @@ function peticionAJAX(url){
     xhr.send();
 }
 
-peticionAJAX(URL_api);
+peticionAJAX(url_api);
