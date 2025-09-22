@@ -1,7 +1,7 @@
-const productos = document.querySelector("#contenedor_formulario_producto_nuevo");
+/*const tarjetas = document.querySelector("#contenedor_formulario_producto_nuevo");
  
  
-function creartarjeta(producto){
+function creartarjeta(tarjeta){
         const contenedor = document.createElement("div");
         contenedor.classList.add("contenedor");
  
@@ -17,6 +17,13 @@ function creartarjeta(producto){
         const descripcion = document.createElement("descripcion");
         descripcion.textContent = producto.Descripcion;
         elementos.appendChild(descripcion);
+
+        contenedor.appendChild(imagen);
+        contenedor.appendChild(titulo);
+        contenedor.appendChild(texto);
+        contenedor.appendChild(precio);
+        contenedor.appendChild(boton);
+        elementos.appendChild(contenedor);
 }
  
 /*
