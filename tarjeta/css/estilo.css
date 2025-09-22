@@ -12,7 +12,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    margin: 10px;
+    align-items: center;
 }
 .cont{
     width: 30%;
@@ -81,10 +81,10 @@ body{
     align-content: center;
     justify-content: center;
     display: grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(4, 1fr);
     grid-template-rows:repeat(auto-fill, minmax, (1fr, 1fr));
     grid-template-areas: 
-    "productos iniciar crear";
+    "inicio productos iniciar api";
 }
 .productos{
     grid-area: productos;
@@ -93,6 +93,8 @@ body{
     width: 50%;
     text-align: center;
     border-radius: 20px;
+    text-decoration: none;
+    color: aliceblue;
 }
 .iniciar{
     grid-area: iniciar;
@@ -101,14 +103,28 @@ body{
     width: 50%;
     text-align: center;
     border-radius: 20px;
+    text-decoration: none;
+    color: aliceblue;
 }
-.carrito{
-    grid-area: crear;
+.inicio{
+    grid-area: inicio;
     margin: auto;
     padding: 10px;
     width: 50%;
     text-align: center;
     border-radius: 20px;
+    text-decoration: none;
+    color: aliceblue;
+}
+.api{
+    grid-area: api;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+    color: aliceblue;
 }
 /*contenedor*/
 .contenedor_formulario_producto_nuevo{
@@ -134,7 +150,7 @@ body{
     padding: 5px;
     border-style: none;
 }
-.boton3{
+.botonAgregar{
     border-radius: 5px;
     border-style: none;
     padding: 5px;
@@ -144,12 +160,21 @@ body{
     color: aliceblue;
     font-size: 18px;
 }
+.botonCrearTarjeta{
+   background-color: #4c457b;
+    color: aliceblue;
+    padding: 10px;
+    margin: 10px;
+    border-style: none;
+    border-radius: 50px;
+    font-size: 20px;
+}
 
 .imagen-previsualizacion{
     border: 2ps solid black;
     width: 100%;
 }
-.botonProducto{
+.botonMostrar{
     background-color: #4c457b;
     color: aliceblue;
     padding: 10px;
@@ -157,4 +182,18 @@ body{
     border-style: none;
     border-radius: 50px;
     font-size: 20px;
+}
+.contapi{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.botonapi{
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #4c457b;
+    color: aliceblue;
+    font-size: 40px;
 }
