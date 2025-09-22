@@ -1,4 +1,5 @@
 const formulario_producto_nuevo = document.querySelector("#formulario_producto_nuevo");
+const elementos = document.querySelector("#elementos");
 let productos = []; //declarando un arreglo vacio
 let src_imagen_producto = "../recursos/default.jpg";
 let formulario_visible = false;
@@ -10,6 +11,7 @@ class Producto{
         this.Nombre = nombre;
         this.Descripcion = descripcion;
         this.Precio = precio;
+        this.Contenedor = contenedor;
     }
     ObternerDatos(){
         console.log(this.Id);
@@ -17,6 +19,7 @@ class Producto{
         console.log(this.Nombre);
         console.log(this.Descripcion);
         console.log(this.Precio);
+        console.log(this.Contenedor);
     }
 }
 //cada elemento guardado en el formulario lo convierte en objeto
@@ -55,6 +58,37 @@ function ObtenerImagen(event){
         lector.readAsDataURL(file);
     }
 }
+
+function crearTarjeta(usuario){
+        const producto = document.createElement("div");
+        producto.classList.add("contenedor_formulario_producto_nuevo");
+        
+        const imagen = new Image();
+        imagen.src = usuario.Imagen;
+        imagen.classList.add("imagen_producto");
+        
+        const nombre = document.createElement("nombre_producto");
+        nombre.textContent = usuario.Nombre;
+        
+        const descripcion = document.createElement("descripcion");
+        descripcion.textContent = usuario.Descripcion;
+
+        const precio = document.createElement("precio");
+        precio.textContent = usuario.Precio;
+        
+        const boton = document.createElement("botonAgregar");
+        boton.textContent = `Agregar`
+
+        producto.appendChild(imagen);
+        producto.appendChild(nombre);
+        producto.appendChild(descripcion);
+        producto.appendChild(precio);
+        producto.appendChild(boton);
+    
+       const contenedor = document.querySelector("#elementos") || document.body;
+       contenedor.appendChild(producto);
+}
+
 function MostrarProducto(){
     const formulario = document.querySelector("#contenedor_formulario_producto_nuevo");
 
