@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "titulo": "The Legend of Zelda: Breath of the Wild",
+        "descripcion": "Explora un vasto mundo abierto lleno de aventuras y desafíos.",
+        "plataforma": "Nintendo Switch"
+    },
+    {
+        "id": 2,
+        "titulo": "God of War",
+        "descripcion": "Acompaña a Kratos en su viaje por la mitología nórdica.",
+        "plataforma": "PlayStation 4"
+    },
+    {
+        "id": 3,
+        "titulo": "Red Dead Redemption 2",
+        "descripcion": "Sumérgete en el salvaje oeste con una historia épica y un mundo detallado.",
+        "plataforma": "PlayStation 4, Xbox One, PC"
+    },
+    {
+        "id": 4,
+        "titulo": "Minecraft",
+        "descripcion": "Construye y explora mundos generados proceduralmente.",
+        "plataforma": "PC, Consolas, Móviles"
+    },
+    {
+        "id": 5,
+        "titulo": "Fortnite",
+        "descripcion": "Un juego de batalla real con construcción y acción frenética.",
+        "plataforma": "PC, Consolas, Móviles"
+    },
+    {
+        "id": 6,
+        "titulo": "The Witcher 3: Wild Hunt",
+        "descripcion": "Embárcate en una aventura épica como el cazador de monstruos Geralt de Rivia.",
+        "plataforma": "PC, PlayStation 4, Xbox One"
+    },
+    {
+        "id": 7,
+        "titulo": "Overwatch",
+        "descripcion": "Un shooter en equipo con héroes únicos y habilidades especiales.",
+        "plataforma": "PC, PlayStation 4, Xbox One"
+    },
+    {
+        "id": 8,
+        "titulo": "Animal Crossing: New Horizons",
+        "descripcion": "Crea tu propia isla paradisíaca y vive la vida a tu ritmo.",
+        "plataforma": "Nintendo Switch"
+    },
+    {
+        "id": 9,
+        "titulo": "Cyberpunk 2077",
+        "descripcion": "Explora una ciudad futurista llena de tecnología avanzada y peligros.",
+        "plataforma": "PC, PlayStation 4, Xbox One"
+    },
+    {
+        "id": 10,
+        "titulo": "Apex Legends",
+        "descripcion": "Un juego de batalla real con héroes únicos y habilidades especiales.",
+        "plataforma": "PC, PlayStation 4, Xbox One"
+    }
+]
