@@ -12,20 +12,6 @@ Incluir validaciones cuando:
 Los campos estén vacíos.
 No se encuentre el videojuego.
 No se logre realizar una acción.La lista no esté inicializada. 
-
-Cada videojuego debe mostrarse en una tarjeta que contenga:
-Título
-Descripción
-Plataforma
-Botones de Editar y Eliminar (ambos deben funcionar).
-Al editar o eliminar, la lista debe actualizarse dinámicamente sin recargar la página.
-
-Formulario
-Debe permitir agregar un nuevo videojuego con los campos:
-Título
-Descripción
-Plataforma
-Si los campos están vacíos, debe mostrarse un mensaje de error visual.
 */
  
 
@@ -34,9 +20,11 @@ export class GestorVideojuegos {
         this.videojuegos = [];
         this.nextId = 1; // asignar id unico
     }
+    //obtener la lista completa de videojuegos
     ObtenerLista() {
         return this.videojuegos;
     }
+    //obtener un videojuego por su id
     ObtenerPorId(id) {
         const videojuego = this.videojuegos.find(vj => vj.id === id);
         if (!videojuego) {
@@ -73,7 +61,7 @@ export class GestorVideojuegos {
             throw error;
         }   
     }
-    //eliminar un videojuego
+    //eliminar un videojuegos
     Eliminar(id) {
         try {   
             const index = this.videojuegos.findIndex(vj => vj.id === id);

@@ -4,20 +4,6 @@ Crear dinámicamente las tarjetas con los videojuegos.
 Generar botones funcionales de editar y eliminar en cada tarjeta.
 Mostrar mensajes de error o confirmación visualmente.
 Conectarse con la clase GestorVideojuegos para actualizar los datos.
-
-Cada videojuego debe mostrarse en una tarjeta que contenga:
-Título
-Descripción
-Plataforma
-Botones de Editar y Eliminar (ambos deben funcionar).
-Al editar o eliminar, la lista debe actualizarse dinámicamente sin recargar la página.
-
-Formulario
-Debe permitir agregar un nuevo videojuego con los campos:
-Título
-Descripción
-Plataforma
-Si los campos están vacíos, debe mostrarse un mensaje de error visual.
 */ 
 
 export class ControladorVista {
@@ -66,14 +52,14 @@ export class ControladorVista {
     }
     //se encarga de guardar o actualizar un videojuego
     GuardarVideojuego() {
-        const titulo = this.formulario.titulo.value.trim();
+        const titulo = this.formulario.titulo.value.trim(); 
         const descripcion = this.formulario.descripcion.value.trim();
         const plataforma = this.formulario.plataforma.value.trim();
         if (!titulo || !descripcion || !plataforma) {
             this.MostrarError("Todos los campos son obligatorios.");
             return;
         }
-        const datos = { titulo, descripcion, plataforma };
+        const datos = { titulo, descripcion, plataforma }; //nuevo objeto videojuego
         try {   
             if (this.videojuegoActual) {
                 this.gestor.Actualizar(this.videojuegoActual.id, datos);
