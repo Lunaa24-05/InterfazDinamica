@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <!--fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Matemasie&family=Outfit:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Lista de juegos por jugar</h1>
+    <div class="contenedor-formulario-agregar">
+       <form id="formulario_agregar">
+        <div id="mensaje_error" hidden></div>
+          <div>
+            <input type="text" placeholder="Titulo" name="titulo"> 
+          </div>
+           <div>
+            <input type="text" placeholder="Descripcion" name="descripcion">
+          </div>
+        </form>
+       <button id="boton_agregar">Agregar</button>
+    </div>
+    <div class="contenedor-elementos-juegos" id="contenedor_elementos_juegos">
+      <div class="elemento-lista-juegos">
+        <h2>Titulo del juego</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+          Facere molestiae ipsum, sit corporis ipsa doloremque amet temporibus hic cumque mollitia, 
+          rerum blanditiis dicta! Doloribus, animi minima! Voluptas nam accusamus omnis!</p>
+          <button id="boton_editar" class="editar">Editar</button>
+          <button id="boton_eliminar" class="eliminar">Eliminar</button>
+       </div>
+    </div>
+</body>
+<script type="module" src="js/main.js"></script>
+</html>

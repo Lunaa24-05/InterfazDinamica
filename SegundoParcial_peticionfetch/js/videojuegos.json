@@ -1,0 +1,22 @@
+[
+  { "id": 1,"titulo": "The Legend of Zelda", "descripcion": "Aventura y exploración" },
+  { "id": 2, "titulo": "God of War", "descripcion": "Acción y mitología nórdica" },
+  { "id": 4, "titulo": "The Witcher 3: Wild Hunt", "descripcion": "RPG y fantasía" },
+  { "id": 5, "titulo": "Minecraft", "descripcion": "Construcción y supervivencia" },
+  { "id": 6, "titulo": "Fortnite", "descripcion": "Battle royale y construcción" },
+  { "id": 7, "titulo": "Overwatch", "descripcion": "Shooter en equipo y habilidades únicas" },
+  { "id": 8, "titulo": "Dark Souls III", "descripcion": "RPG y acción" },
+  { "id": 9, "titulo": "Hades", "descripcion": "Roguelike y mitología griega" },
+  { "id": 10, "titulo": "Celeste", "descripcion": "Plataformas y superación personal" },
+  { "id": 11, "titulo": "Elden Ring", "descripcion": "RPG de mundo abierto y fantasía oscura" },
+  { "id": 3, "titulo": "Red Dead Redemption 2", "descripcion": "Acción y aventura" },
+  { "id": 12, "titulo": "Hollow Knight", "descripcion": "Metroidvania y exploración" },
+  { "id": 13, "titulo": "Super Mario Odyssey", "descripcion": "Plataformas y aventura" },
+  { "id": 14, "titulo": "Persona 5 Royal", "descripcion": "RPG y simulación social" },
+  { "id": 15, "titulo": "Genshin Impact", "descripcion": "Acción, aventura y mundo abierto" },
+  { "id": 16, "titulo": "Resident Evil 4 Remake", "descripcion": "Survival horror y acción" },
+  { "id": 17, "titulo": "Stardew Valley", "descripcion": "Simulación y granja" },
+  { "id": 18, "titulo": "Cyberpunk 2077", "descripcion": "RPG y ciencia ficción" },
+  { "id": 19, "titulo": "Cuphead", "descripcion": "Plataformas y disparos estilo retro" },
+  { "id": 20, "titulo": "Among Us", "descripcion": "Multijugador y deducción social" }
+]
