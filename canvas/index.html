@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- hacer menu de canvas: dibujar, borrar, cuadrado, circulo -->
+    <!-- input para subir imagen -->
+    <div class="menu">
+        <button id="boton_pincel" class="pincel">Pincel</button>
+        <button id="boton_borrar" class="borrar">Borrar</button>
+        <button id="boton_linea" class="linea">Línea</button>
+        <button id="boton_cuadrado" class="cuadrado">Cuadrado</button>
+        <button id="boton_circulo" class="circulo">Círculo</button>
+        <button id="boton_corazon" class="corazon">Corazón</button>
+        <button id="boton_limpiar" class="limpiar">Limpiar</button>
+        <button id="boton_sticker" class="sticker">Sticker</button>
+        <button id="boton_deshacer">Deshacer</button>
+    </div>
+    <div class="menu2">
+        <input type="file" id="boton_cargar_imagen" class="cargar_imagen" accept="image/*">
+        <div class="imagen">
+                    <div class="imagen-seleccionada">preview</div>
+                    <input type="file" id="seleccionar_imagen">
+                    <label for="seleccionar_imagen" title="Subir imagen">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    </label>
+                </div>
+
+                <div class="grupo-opcion">
+                    <label for="color_linea">Color de línea:</label>
+                    <input type="color" id="color_linea" value="#00e0ff">
+                </div>
+
+                <div class="grupo-opcion">
+                    <label for="color_relleno">Color de relleno:</label>
+                    <input type="color" id="color_relleno" value="#ff4fd8">
+                </div>
+
+                <div class="grupo-opcion">
+                    <label for="grosor_linea">Grosor de línea:</label>
+                    <input type="range" id="grosor_linea" min="1" max="20"
+                        value="5">
+                </div>
+
+                <div class="grupo-opcion tipo-dibujo">
+                    <span>Tipo de trazo:</span>
+                    <label><input type="radio" name="tipo" id="solo_linea"
+                            checked>
+                        Solo línea</label>
+                    <label><input type="radio" name="tipo" id="con_relleno"> Con
+                        relleno</label>
+            </div>
+    </div>
+    <canvas class="canvas" id="canvas" width="1000" height="600"></canvas>
+</body>
+<script type="module" src="js/canvas.js"></script>
+</html>
