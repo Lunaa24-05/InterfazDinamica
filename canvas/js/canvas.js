@@ -90,6 +90,8 @@ canvas.addEventListener('mousemove',(event)=>{
             case 'pincel':
                 ctx.lineCap = 'round';
                 ctx.lineJoin = 'round';
+                ctx.strokeStyle = colorLinea;
+                ctx.lineWidth = grosorLinea;
                 ctx.beginPath();
                 ctx.moveTo(posicionesCursor.iniciales.x, posicionesCursor.iniciales.y);
                 ctx.lineTo(posicionesCursor.actuales.x, posicionesCursor.actuales.y);
@@ -100,7 +102,12 @@ canvas.addEventListener('mousemove',(event)=>{
             case 'borrar':
                 case 'borrar':
                     const tamaño = grosorLinea * 5;
-                    ctx.clearRect(event.offsetX - tamaño / 2, event.offsetY - tamaño / 2, tamaño, tamaño);
+                    ctx.save();
+                    ctx.globalCompositeOperation = "destination-out";
+                    ctx.beginPath();
+                    ctx.arc(event.offsetX, event.offsetY, tamaño / 2, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
                 break;
             case 'cuadrado':
                 figura = new Cuadrado(posicionesCursor.iniciales.x, posicionesCursor.iniciales.y,
@@ -137,7 +144,7 @@ canvas.addEventListener('mouseup', (event) => {
     switch (opcion) {
         case 'pincel':
             if (puntosTrazo.length > 1) {
-                figura = new Trazo(puntosTrazo);
+                figura = new Trazo(puntosTrazo, colorLinea, grosorLinea);
             }
             puntosTrazo = [];
             break;
@@ -173,8 +180,8 @@ canvas.addEventListener('mouseup', (event) => {
     if (figura != null)
         figuras.push(figura);
  
-    renderizarFiguras();
-    trazoIniciado = false;
+     trazoIniciado = false;
+     return; // <- no redibuja, no borra el borrado
 });
   
 
