@@ -124,8 +124,8 @@ export class Sticker{
 }
 
 export class Trazo {
-    constructor(puntos, color_linea = 'black', grozor_linea = 2) {
-        this.puntos = puntos; // array de {x, y}
+   constructor(puntos, color_linea, grozor_linea) {
+        this.puntos = puntos;
         this.color_linea = color_linea;
         this.grozor_linea = grozor_linea;
     }
