@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego: Atrapar flores</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://kit.fontawesome.com/48ddc52f38.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Lexend:wght@100..900&family=Matemasie&family=Outfit:wght@500&family=Ramabhadra&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h2>Atrapar flores <i class="fa-solid fa-clover"></i></h2>
+        <a href="iniciar_sesion.html">Iniciar Sesion <i class="fa-slab fa-regular fa-circle-user"></i></a>
+    </nav>
+    <canvas id="Juego" width="1000" height="500"></canvas>    
+    <div class="contenedor-datos">
+        <h2>Puntaje: <span id="puntaje">0</span></h2>
+        <button id="boton_empezar"><i class="fa-solid fa-gamepad"></i> Iniciar Juego</button>
+        <button id="boton-reiniciar"><i class="fa-solid fa-rotate-right"></i> Reiniciar Juego</button>
+        <h2>Nombre de usuario: <span id="mostrar_usuario">Invitado</span></h2>
+    </div>    
+</body>
+<script type="module" src="js/main.js"></script>  
+</html>

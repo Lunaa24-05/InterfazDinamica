@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Lexend", sans-serif;
+}
+.lexend-uniquifier {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+nav{
+    grid-area: nav;
+    height: 60px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h2{
+    font-size: 24px;
+    color: #0e5fbb;
+    margin: 0;
+}
+nav a{
+    font-size: 20px;
+    color: #0e5fbb;
+    text-decoration: none;
+    margin-right: 60px;
+}
+.inicio{
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 3fr;
+    gap: 10px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    grid-template-areas: 
+    "h2"
+    "nombre"
+    "contrasena"
+    "boton";
+}
+button{
+    padding: 10px;
+    background-color: #33b9e6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.contenedor-is{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+.contenedor-iniciarsesion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e5fbb;
+    gap: 15px;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+.contenedor-iniciarsesion input{
+    font-size: 16px;
+    border-radius: 8px;
+    height: 40px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+}
+.contenedor-iniciarsesion input::placeholder{
+    color: #999;
+}
+.contenedor-iniciarsesion button{
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.iniciar_sesion{
+     padding: 10px;
+    background-color: #33b9e6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.registrar_sesion{
+    padding: 10px;
+    color: white;
+    background-color: #053060;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.registrar_sesion:hover{
+    background-color: #000a15;
+    color: white;
+    transition: .5s;
+}
+.cerrar_sesion{
+    padding: 10px;
+    color: white;
+    background-color: #053060;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.cerrar_sesion:hover{
+    background-color: #000a15;
+    transition: .5s;
+    color: white;
+}
+canvas{
+    grid-area: canvas;
+    margin:50px;
+    border-radius: 15px;
+    background-image: url(../recursos/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contenedor-datos{
+    grid-area: contenedor-datos;
+    height: auto;
+    background-color: #0e5fbb;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+.contenedor-datos p,
+.contenedor-datos button{
+    margin: 5px;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+.contenedor-datos h2{
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+.contenedor-datos button{
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+}
+.contenedor-datos button:hover{
+    background-color: #022083;
+    color: white;
+    transition: .5s;
+}
+body{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:repeat(auto-fill, minmax, (1fr, 1fr));
+    grid-template-areas:
+    "nav nav nav nav"
+    "contenedor-datos canvas canvas canvas"
+    "contenedor-datos canvas canvas canvas";   
+} 

@@ -1,0 +1,9 @@
+[
+   { 
+        "id":1,
+        "nombre":"Angela",
+        "correo":"angela@gmail.com",
+        "contraseña":"12345678",
+        "edad":"20"
+    }
+]
