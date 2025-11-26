@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 const contraseña = document.getElementById('password')?.value?.trim();
                 const user = registrarUsuario(nombre, correo, edad, contraseña);
                 alert('Registro exitoso. Sesión iniciada como: ' + user.nombre);
+                window.location.href = 'index.html';
             }catch(error){
                 alert(error.message || 'Error al registrar usuario');
             }
@@ -74,6 +75,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             e.preventDefault();
             cerrarSesion();
             alert('Sesión cerrada');
+            window.location.href = 'index.html';
         });
     }
 });
